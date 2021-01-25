@@ -1,5 +1,47 @@
 \section{Quantum fluids}
+
+% ######################################
 \subsection*{Fermion vs. bosons}
 Particles with half-integer (integer) spin are called fermions (bosons). Their
 total wave function (space and spin) must be antisymmetric (symmetric)
 under the exchange of any pair of identical particles.
+
+% ######################################
+\subsubsection*{Canonical ensemble}
+two particles that are distributed over two states with energies 0 and $\epsilon$
+
+\begin{equation*}
+    \begin{aligned}
+        Z_F &= e^{-\beta \epsilon} \; \text{ Fermi-Dirac} \\
+        Z_B &= 1+ e^{-\beta \epsilon} + e^{-2\beta \epsilon} \; \text{ Bose-Einstein} \\
+        Z_M &= \frac{1+ 2e^{-\beta \epsilon} + e^{-2\beta \epsilon}}{2} \; \text{ Maxwell-Boltzmann}
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Grand canonical ensemble}
+Fermions:
+\begin{equation*}
+    z_F = 1+e^{-\beta(\epsilon-\mu)}
+\end{equation*}
+average occupation number $n_F$:
+\begin{equation*}
+    n_F = \frac{1}{e^{\epsilon - \mu}+1} \; \text{ Fermi function}
+\end{equation*}
+For $T \rightarrow 0$, the fermi function approaches a step function:
+\begin{equation*}
+    n_F = \Theta (\mu - \epsilon)
+\end{equation*}
+Bosons:
+\begin{equation*}
+    z_B = \frac{1}{1-e^{-\beta(\epsilon-\mu)}}
+\end{equation*}
+average occupation number $n_B$:
+\begin{equation*}
+    n_B = \frac{1}{e^{\beta(\epsilon - \mu)}-1}
+\end{equation*}
+
+\begin{itemize}
+    \item Fermions tend to fill up energy states one after the other
+    \item Bosons tend to condense all into the same low energy state
+\end{itemize}
