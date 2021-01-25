@@ -1,0 +1,251 @@
+\section{The canonical ensemble}
+
+% ######################################
+\subsection*{Boltzmann distribution}
+Temperature $T$ is fixed. 
+
+\begin{equation*}
+    \begin{aligned}
+        p_i &= \frac{1}{Z} e^{- \beta E_i} \quad \text{Boltzmann distribution} \\
+        Z &= \sum_i e^{- \beta E_i} \quad \text{partition sum}
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{For classical Hamiltonian systems:}
+\begin{equation*}
+    \begin{aligned}
+        p(\vec{q}, \vec{p}) &= \frac{1}{Z N! h^{3N}} e^{- \beta \mathcal{H}(\vec{q},\vec{p})} \\
+        Z &= \frac{1}{N! h^{3N}} \int d\vec{q} d\vec{p} e^{- \beta \mathcal{H}(\vec{q},\vec{p})}
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Free energy}
+probability that the system has energy E
+
+\begin{equation*}
+    \begin{aligned}
+        p(E) &= \frac{1}{Z} \Omega(E) e^{-\beta E} = \frac{1}{Z} e^{-\beta E + S(E)/k_B} \\
+            &= \frac{1}{Z} e^{- \frac{E -TS}{k_B T}} = \frac{1}{Z} e^{-\beta F}
+    \end{aligned}
+\end{equation*}
+This is maximal, if $F$ has a minimum with respect to E:
+\begin{equation*}
+    \begin{aligned}
+        0 &= \frac{\partial F}{\partial E} = 1-T \frac{\partial S}{\partial E} = 1- T \frac{1}{T_1}
+    \end{aligned}
+\end{equation*}
+thas is when the system is as the temperature of the heath bath.
+
+In the canonical ensemble, equilibrium corresponds to the minimum of the
+free energy $F(T,V,N)$
+\begin{equation*}
+    \frac{1}{T} = \frac{\partial S(E,V,N)}{\partial E}
+\end{equation*}
+
+total differential of $F(T,p,V)$
+\begin{equation*}
+    \begin{aligned}
+        dF &= dE + d(TS) \\
+        &= TdS - pdV + \mu N - TdS -SdT \\
+        &= -SdT -pdV + \mu N
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{Equations of state}
+\begin{equation*}
+    \begin{aligned}
+        S &= - \frac{\partial F}{\partial T} \\
+        p &= - \frac{\partial F}{\partial V} \\
+        \mu &= \frac{\partial F}{\partial N}
+    \end{aligned}
+\end{equation*}
+how to calculate $F$:
+\begin{equation*}
+    \rightarrow F(T,V,N) = -k_B T \ln(Z(T,V,N))
+\end{equation*}
+how to calculate average energy $U = \langle E \rangle$ directly from the partition sum:
+\begin{equation*}
+    \begin{aligned}
+        \langle E \rangle &= \sum_i p_i E_i = \frac{1}{Z} \sum_i E_i e^{-\beta E_i} \\
+        &= - \partial_\beta \ln (Z(\beta))
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Non-interacting systems}
+$\epsilon_{ij}$ is the $j^{th}$ state of the $i^{th}$ element
+
+\begin{equation*}
+    \begin{aligned}
+        Z &= \sum_{j_1} \sum_{j_2} \dots \sum_{j_N} e^{-\beta \sum_{i=1}^N \epsilon_{ij_i}} \\
+        &= \left(\sum_{j_1} e^{-\beta \epsilon_{1j_1}}\right) \dots \left(\sum_{j_N} e^{-\beta \epsilon_{Nj_1N}}\right) \\
+        &= z_1 \cdot \dots \cdot z_N = \prod_{i=1}^N z_i \\
+        \rightarrow F &= -k_B T \sum_{i=1}^N \ln(z_i) = -k_B T \ln(Z)
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+    Z = z^N , \qquad F = -k_B T N ln(z)
+\end{equation*}
+
+\subsubsection*{TODO: ADD EXAMPLES}
+
+% ######################################
+\subsection*{Equipartition theorem}
+f are the degrees of freedom.
+
+harmonic Hamiltonian with $f=2$
+\begin{equation*}
+    \begin{aligned}
+        \mathcal{H} &= Aq^2 + Bp^2 \\
+        z &\propto \int dq dp e^{-\beta \mathcal{H}} \\
+        &= \left(\frac{\pi}{A\beta}\right)^{\frac{1}{2}} \cdot \left(\frac{\pi}{B \beta}\right)^{\frac{1}{2}} \\
+        &\propto \left(T^{\frac{1}{2}}\right)^f
+    \end{aligned}
+\end{equation*}
+For sufficiently high temperture (classical limit), each quadratic term 
+in the Hamiltonian contributes a factor $T^{\frac{1}{2}}$ to the partition sum \textbf{('equipartition theorem')}
+
+\begin{equation*}
+    \begin{aligned}
+        F &= -k_B T \ln(z) = - \frac{f}{2} k_B T ln(T) \\
+        S &= - \frac{\partial F}{\partial T} = \frac{f}{2} k_B (\ln(T)+1) \\
+        U &= - \partial_\beta \ln (z) = \frac{f}{2} k_B T \\
+        c_v &= \frac{dU}{dT} = \frac{f}{2} k_B
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Molecular gases}
+
+\begin{equation*}
+    \begin{aligned}
+        Z &= Z_{trans} \cdot Z_{vib} \cdot Z_{rot} \cdot Z_{elec} \cdot Z_{nuc} \\
+        Z_x &= z_x^N
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{Vibrational modes}
+often described by the Morse potential:
+
+\begin{equation*}
+    V(r) = E_0 \left(1- e^{-\alpha (r-r_0)}\right)^2
+\end{equation*}
+
+An exact solution of the Schrödinger equation gives:
+
+\begin{equation*}
+    \begin{aligned}
+        E_n &= \hbar \omega_0 \left(n + \frac{1}{2}\right) - \frac{\hbar^2 \omega_0^2}{e E_0} \left(n + \frac{1}{2}\right)^2 \\
+        \omega_0 &= \frac{\alpha}{2 \pi} \sqrt{\frac{2 E_0}{\mu}} , \quad \mu = \frac{m}{2}
+    \end{aligned}
+\end{equation*}
+
+For $\hbar \omega_0 \ll E_0 $ we can use the harmonic approximation:
+
+\begin{equation*}
+    \begin{aligned}
+        z_{vib} &= \frac{e^{-\beta \hbar \omega /2}}{1- e^{- \beta \hbar \omega_0}}\\
+        T_{vib} &\approx \frac{\hbar \omega_0}{k_B} \approx 6.140 K \; \text{ for } H_2
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{Rotational modes}
+
+standart approximation is the one of a rigid rotator. The moment of inertia is given as:
+\begin{equation*}
+    \begin{aligned}
+        I &= \mu r_0^2 \quad T_{rot} = \frac{\hbar^2}{I k_B}\\
+        \rightarrow E_l &= \frac{\hbar^2}{2I} l(l+1)
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{Nuclear contributions: ortho- and parahydrogen}
+
+\begin{equation*}
+    \begin{aligned}
+        z_{ortho} &= \sum_{l=1,3,5,\dots} (2l +1) e^{- \frac{l(l+1) T_{rot}}{T}} \\
+        z_{para} &= \sum_{l=0,2,4,\dots} (2l +1) e^{- \frac{l(l+1) T_{rot}}{T}}
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Specific heat of a solid}
+
+\subsubsection*{Debye model}
+
+\begin{equation*}
+    \begin{aligned}
+        \rightarrow \omega(k) &= \left(\frac{4 \kappa}{m}\right)^{\frac{1}{2}} \abs{\sin \left(\frac{ka}{2}\right)} \\
+        \omega &= \frac{2 \pi}{T}, \quad k = \frac{2 \pi}{\lambda} \\
+    \end{aligned}
+\end{equation*}
+
+Debye frequency:
+
+\begin{equation*}
+    \begin{aligned}
+        \omega_D &= c_s \left(\frac{6 \pi^2 N}{V}\right)^{\frac{1}{3}} \\
+        c_s &= \left. \frac{d\omega}{dk} \right|_{k=0} = \sqrt{\frac{\kappa}{m}}a
+    \end{aligned}
+\end{equation*}
+
+density of states in $\omega-$space:
+\begin{equation*}
+    D(\omega) = 3 \frac{\omega^2}{\omega_D^3} \quad \text{for} \omega \leq \omega_D
+\end{equation*}
+
+count modes in frequency-space:
+\begin{equation*}
+    \begin{aligned}
+        \sum_{modes} (\dots) = 3 \sum_k (\dots) = 3N \int_0^{\omega_D} d\omega D(\omega) (\dots)
+    \end{aligned}
+\end{equation*}
+
+partition sum:
+\begin{equation*}
+    z(\omega) = \frac{e^{-\beta \hbar \omega/2}}{1- e^{-\beta \hbar \omega}}
+\end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        \rightarrow Z &= \prod_{modes} z(\omega) \\
+        \rightarrow E &= - \partial_\beta \ln(Z) = \sum_{modes} \hbar \omega \left(\frac{1}{e^{\beta \hbar \omega}-1} +\frac{1}{2}\right)\\
+            &= E_0 + 3N \int_0^{\omega_D} d\omega \frac{\hbar \omega}{e^{\beta \hbar \omega}-1} \frac{3 \omega^2}{\omega_D^3}\\
+        c_v(T) &= \frac{\partial E}{\partial T} \\
+            &= \frac{3 \hbar^2 N}{k_B T^2} \int_0^{\omega_D} d\omega \frac{3\omega^2}{\omega_D^3} \frac{e^{\beta \hbar \omega}\omega^2}{\left(e^{\beta \hbar \omega}-1\right)^2} \\
+        u &= \beta \hbar \omega \\
+        c_v(T) &= \frac{9Nk_B}{u_m^3} \int_0^{u_m} \frac{e^u u^4}{\left(e^u -1\right)^2} du
+    \end{aligned}
+\end{equation*}
+the limit for $\hbar \omega_D \ll k_B T$:
+\begin{equation*}
+    c_v(T) = 3Nk_B
+\end{equation*}
+the limit for $k_B T \ll \hbar \omega_D$: ($T_D = \frac{\hbar \omega_D}{k_B}$)
+\begin{equation*}
+    c_v(T) = \frac{12 \pi^4}{5} N k_B \left(\frac{T}{T_D}\right)^3
+\end{equation*}
+
+% ######################################
+\subsection*{Black body radiation}
+
+\begin{equation*}
+    \begin{aligned}
+        E &= \frac{4 \sigma}{c} V T^4 , \quad \sigma = \frac{\pi^2 k_B^4}{60 \hbar^3 c^2} \\
+        c_v &= \frac{16 \sigma}{c} V T^3
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+    J = \frac{P}{A} = \sigma T^4 \quad \text{Stefan- Boltzmann law}
+\end{equation*}
+Plank's law for black body radiation
+\begin{equation*}
+    u(\omega) := \frac{\hbar}{\pi^2 c^3} \frac{\omega^3}{e^{\hbar\omega/(k_BT)}-1}
+\end{equation*}
+The Plank distribution has a maximum at:
+\begin{equation*}
+    \hbar \omega_{max} = 2.82 k_B T \quad \text{Wien's displacement law}
+\end{equation*}

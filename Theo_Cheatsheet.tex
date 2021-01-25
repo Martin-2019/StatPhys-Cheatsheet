@@ -1,0 +1,45 @@
+% Latex template:
+% https://github.com/tim-st/latex-cheatsheet
+% https://stackoverflow.com/questions/1911516/how-to-make-cheat-sheets-in-latex
+% https://tex.stackexchange.com/questions/218587/how-to-set-one-header-for-each-page-using-multicols
+%
+\documentclass[10pt,landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+% \usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[LY1,T1]{fontenc}
+%\usepackage{frutigernext}
+%\usepackage[lf,minionint]{MinionPro}
+%\usepackage{tikz}
+%\usetikzlibrary{shapes,positioning,arrows,fit,calc,graphs,graphs.standard}
+\usepackage[nosf]{kpfonts}
+\usepackage[t1]{sourcesanspro}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage[top=1mm,bottom=1mm,left=1mm,right=1mm]{geometry}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{microtype}
+\usepackage{pdfpages}
+
+% 'enumitem' to remove 'itemize' indent using
+% \begin{itemize}[leftmargin=*]...\end{itemize} 
+% or \setlength{\itemindent}{0pt} (comment by L.V.)
+\usepackage{enumitem}
+
+\let\bar\overline
+  
+\include{contents/def}
+
+\begin{document}
+%\small
+\footnotesize 
+\begin{multicols*}{5}
+\input{contents/01}
+\input{contents/02}
+\input{contents/03}
+\input{contents/04}
+\input{contents/05}
+\input{contents/sonstiges}
+
+\end{multicols*}
+\end{document}
