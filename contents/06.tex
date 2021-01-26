@@ -1,1 +1,21 @@
 \section{Phase transitions}
+
+% ######################################
+\subsection*{Ising model}
+\begin{equation*}
+    \begin{aligned}
+        \mathcal{H} &= -J \sum_{\langle ij \rangle} S_i S_j - B \mu \sum_i S_i \\
+        \beta \mathcal{H} &= - K \sum_{\langle i j \rangle} S_i S_j - H \sum_i S_i \\
+        K &= \beta J, \quad H = \beta B \mu\\
+        Z_N(K,H) &= \sum_{S_1 = \pm 1} \dots \sum_{S_N = \pm 1} e^{-\beta \mathcal{H}} 
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{The 1D Ising model}
+\begin{equation*}
+    \begin{aligned}
+        Z_N &\overset{N \gg 1}{\approx} (2 \cosh(K))^N \\
+        F &= -k_B TN \ln \left( 2 \cosh \left(\frac{J}{k_B T}\right) \right) \\
+        \forall i &: K_i = K \Rightarrow (\tanh(K))^j
+    \end{aligned}
+\end{equation*}
