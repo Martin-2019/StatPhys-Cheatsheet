@@ -69,6 +69,7 @@
     \end{aligned}
 \end{equation*}
 
+\pagebreak
 % ######################################
 \subsection*{ The 2d Ising model}
 \begin{equation*}
@@ -93,6 +94,19 @@
 \begin{equation*}
     \begin{aligned}
         \mathcal{H} &= -J \sum_{\langle i,j \rangle} S_i S_j \\
-        \mathcal{H}_0 &= -B \sum_i S_i
+        \mathcal{H}_0 &= -B \sum_i S_i \\
+        F_0 &= -N k_B T \ln \left(e^{\beta B} + e^{-\beta B}\right) \\
+            &= -N k_B T \ln (2 \cosh(\beta B)) \\
+        F &\leq F_0 + \langle \mathcal{H} - \mathcal{H}_0 \rangle_0 \\
+            &= -N k_B T \ln(2 \cosh(\beta B)) - N \frac{z}{2} \langle S \rangle_0^2 \\
+            &+ N \langle S \rangle_0 = F_u\\
+        \rightarrow & z = 2 \cdot \text{dimension} \\
+        B &= J z \langle S \rangle_0 = Jz \tanh(\beta B) 
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        K_c &= \frac{1}{z} \rightarrow T_c = \frac{zJ}{k_B}
     \end{aligned}
 \end{equation*}
