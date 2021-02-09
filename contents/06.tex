@@ -7,7 +7,24 @@
         \mathcal{H} &= -J \sum_{\langle ij \rangle} S_i S_j - B \mu \sum_i S_i \\
         \beta \mathcal{H} &= - K \sum_{\langle i j \rangle} S_i S_j - H \sum_i S_i \\
         K &= \beta J, \quad H = \beta B \mu\\
-        Z_N(K,H) &= \sum_{S_1 = \pm 1} \dots \sum_{S_N = \pm 1} e^{-\beta \mathcal{H}} 
+        Z_N(K,H) &= \sum_{S_1 = \pm 1} \dots \sum_{S_N = \pm 1} e^{-\beta \mathcal{H}} = \sum_{\lbrace S_i \rbrace} e^{-\beta \mathcal{H}}
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{examples:}
+\begin{equation*}
+    \begin{aligned}
+        &\text{Ferromagnetic systems:}\\
+        \mathcal{H} &= -J \sum_{\langle i,j \rangle} \vec{J}_i \vec{J}_j - \mu \vec{B}\sum_i \vec{J}_i \\
+        &\text{lattice gases:} \\
+        \mathcal{H} &= -\sum_{\langle i,j \rangle} J_{ij} S_i S_j
+    \end{aligned}
+\end{equation*}
+
+\subsubsection*{magnetisation}
+\begin{equation*}
+    \begin{aligned}
+        M(K,H) &= \left\langle \mu \sum_{i=1}^{N} S_i \right\rangle
     \end{aligned}
 \end{equation*}
 
@@ -16,6 +33,66 @@
     \begin{aligned}
         Z_N &\overset{N \gg 1}{\approx} (2 \cosh(K))^N \\
         F &= -k_B TN \ln \left( 2 \cosh \left(\frac{J}{k_B T}\right) \right) \\
-        \forall i &: K_i = K \Rightarrow (\tanh(K))^j
+        \langle S_i S_{i+j} \rangle &= (\tanh(K))^j = \left(e^{\ln(\tanh(K))}\right)^j = e^{-j/\zeta} \\
+        \zeta &= -(\ln(\tanh(K)))^{-1} \, \text{correlation length}
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Transfer matrix}
+\begin{equation*}
+    \begin{aligned}
+        T_{i,i+1} &= e^{KS_iS_{i+1} + \frac{1}{2}H(S_i + S_{i+1})} \\
+        \rightarrow e^{-\beta \mathcal{H}} &= T_{1,2} \cdot T_{2,3} \dots T_{N,1}\\
+        T &= \begin{pmatrix}
+            T(+1,+1) & T(+1,-1)  \\
+            T(-1,+1) & T(-1,-1)   
+            \end{pmatrix} \\
+        Z_N &= \lambda_1^N + \lambda_2^N
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Renormalization of the Ising chain}
+\begin{equation*}
+    \begin{aligned}
+        K^{'} &= \frac{1}{2} \ln (\cosh (2K))
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Renormalization of the 2d Ising model}
+
+\begin{equation*}
+    \begin{aligned}
+        \bar{K}^{'} &= K^{'} + K_1 = \frac{3}{8} \ln(\cosh(4K))
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{ The 2d Ising model}
+\begin{equation*}
+    \begin{aligned}
+        \beta \mathcal{H} &= -K\sum_{r,c} S_{r,c} S_{r+1,c} - K \sum_{r,c} S_{r.c} S_{r,c+1} \\
+        1 &= \sinh(2K_c) \\
+        K_c &= \frac{1}{2} \ln \left(1+ \sqrt{2}\right) \approx 0.4407 \\
+        T_c &= 2J / \ln \left(1 + \sqrt{2}\right) \approx 2.269 J/k_B
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Perturbation theory}
+\begin{equation*}
+    \begin{aligned}
+        F \leq F_u &= F_0 + \langle \mathcal{H}_1 \rangle_0 \, \text{Bogoliubov inequality}
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+\subsection*{Mean field theory for the Ising model}
+\begin{equation*}
+    \begin{aligned}
+        \mathcal{H} &= -J \sum_{\langle i,j \rangle} S_i S_j \\
+        \mathcal{H}_0 &= -B \sum_i S_i
     \end{aligned}
 \end{equation*}
