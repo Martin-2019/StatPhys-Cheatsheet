@@ -6,18 +6,14 @@
 \begin{equation*}
     \begin{aligned}
         \Omega(E) &= \sum_{n: E- \delta E \leq E_n \leq E} 1 \\
-        \Omega(E; \delta E) &= \frac{1}{h^{3N} N!}  \int_{n: E- \delta E \leq \mathcal{H}(\vec{q}, \vec{p}) \leq E} d \vec{q} d \vec{p} \\
+        \Omega(E; \delta E) &= \frac{1}{h^{3N} N!}  \iint_{E- \delta E \leq \mathcal{H}(\vec{q}, \vec{p}) \leq E} d \vec{q} d \vec{p} \\
         S &= -k_B \sum_{i=1}^\Omega p_i \ln (p_i) = k_B \ln (\Omega)
     \end{aligned}
 \end{equation*}
 
-\subsubsection*{microcanonical partition sum for an ideal gas}
-
+\subsubsection*{$n_0$ different particles}
 \begin{equation*}
-    \begin{aligned}
-        \Omega(E) &= \frac{V^N \pi^{3N/2} (2mE)^{3N/2}}{h^{3N}N!\left( \frac{3N}{2} \right)!} \\
-        S &= k_B N \left\lbrace \ln \left[ \left( \frac{V}{N} \right) \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} \right] + \frac{5}{2}\right\rbrace
-    \end{aligned}
+    \Omega = \frac{1}{h^{3N} \prod_{j=0}^{n_0}N_j!}  \iint_{E- \delta E \leq \mathcal{H}(\vec{q}, \vec{p}) \leq E} d \vec{q} d \vec{p}
 \end{equation*}
 
 % ######################################
@@ -52,14 +48,48 @@
 \end{equation*}
 
 % ######################################
-\subsection*{Equations of state fo ideal gas}
+\subsection*{solution concept}
+
+\begin{itemize}
+    \itemsep 0pt
+    \item Set up Hamiltonian
+    \item Calculate phasevolume $\Omega$
+    \item Calculate entropy $S$
+    \item determine $T,p,\mu$
+    \item Calculate $U = \langle E \rangle$
+    \item thermodynamic potentials: \\
+            $F(T,V,N) = U-TS$ \\
+            $\hat{H}(S,p,N) = U + pV$ \\
+            $G(T,p,N) = U + pV -TS$
+\end{itemize}
+
+
+% ######################################
+\subsection*{Ideal Gas}
+
+\begin{equation*}
+    \mathcal{H} = \sum_{i=1}^{3N} \frac{p_i^2}{2m} + V(q_1, \dots, q_{3N})
+\end{equation*}
+
+\subsubsection*{microcanonical partition sum for an ideal gas}
 
 \begin{equation*}
     \begin{aligned}
-        S &= k_B N \left[\ln \left( \frac{V}{N \lambda^3}\right) + \frac{5}{2}\right] \text{ fundamental} \\
-        E &= \frac{3}{2} N k_B T \qquad \text{ caloric} \\
-        pV &= N k_B T \qquad \text{ thermal}\\
-        \mu &= k_B T \ln \left(\frac{N\lambda^3}{V}\right) \text{ chemical potentail}
+        \Omega(E) &= \frac{V^N \pi^{3N/2} (2mE)^{3N/2}}{h^{3N}N!\left( \frac{3N}{2} \right)!} \\
+        S &= k_B N \left\lbrace \ln \left[ \left( \frac{V}{N} \right) \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} \right] + \frac{5}{2}\right\rbrace
+    \end{aligned}
+\end{equation*}
+
+% ######################################
+
+\subsubsection*{Equations of state fo ideal gas}
+
+\begin{equation*}
+    \begin{aligned}
+        \frac{1}{T} &= \left(\frac{\partial S}{\partial E}\right)_{N,V} = \frac{3}{2} \frac{Nk_B}{E} \rightarrow U = \frac{3}{2} N k_B T \\
+        p &= T\left(\frac{\partial S}{\partial V}\right)_{E,N} = TNk_B \frac{1}{V}\rightarrow pV = N k_B T \\
+        \mu &= k_B T \ln \left(\frac{N\lambda^3}{V}\right) \text{ chemical potentail} \\
+        \lambda &= \frac{h}{\sqrt{2 \pi m k_B T}} \quad \text{Thermische de Broglie}
     \end{aligned}
 \end{equation*}
 

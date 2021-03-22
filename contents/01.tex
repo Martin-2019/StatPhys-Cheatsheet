@@ -32,7 +32,8 @@
         p_i &= {N \choose i} \cdot p^i q^{N-i} \text{  distribution} \\
         \mu &= \langle i \rangle = N \cdot p \\
         \langle i^2 \rangle &= p \cdot N + p^2 \cdot N \cdot (N-1) \\
-        \sigma^2 &= N \cdot p \cdot q
+        \sigma^2 &= N \cdot p \cdot q \\
+        \sum_{i = 0}^N p_{i} &= \sum_{i = 0}^N {N \choose i} \cdot p^i q^{N-i} = \left(p + q\right)^N = 1
     \end{aligned}
 \end{equation*}
 
@@ -40,10 +41,7 @@
 \subsection*{Gauss distribution}
 
 \begin{equation*}
-    \begin{aligned}
-        p(x) &= \frac{1}{\left(2 \pi \sigma^2\right)^{\frac{1}{2}}} \cdot e^{-\frac{x-\mu}{2 \sigma^2}} \\
-        \langle x^2 \rangle = \sigma^2
-    \end{aligned}
+        p(x) = \frac{1}{\left(2 \pi \sigma^2\right)^{\frac{1}{2}}} \cdot e^{-\frac{x-\mu}{2 \sigma^2}}, \quad \langle x^2 \rangle = \sigma^2
 \end{equation*}
 
 % ######################################
