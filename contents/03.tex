@@ -1,8 +1,10 @@
+\noindent\rule[1ex]{\textwidth/5}{1pt}
 \section{The canonical ensemble}
+$T=$ const , $V=$ const , $N=$ const.
+
 
 % ######################################
 \subsection*{Boltzmann distribution}
-Temperature $T$ is fixed. 
 
 \begin{equation*}
     \begin{aligned}
@@ -15,61 +17,32 @@ Temperature $T$ is fixed.
 \begin{equation*}
     \begin{aligned}
         p(\vec{q}, \vec{p}) &= \frac{1}{Z N! h^{3N}} e^{- \beta \mathcal{H}(\vec{q},\vec{p})} \\
-        Z &= \frac{1}{N! h^{3N}} \int d\vec{q} d\vec{p} e^{- \beta \mathcal{H}(\vec{q},\vec{p})}
+        Z_N (T,V) &= \frac{1}{N! h^{3N}} \iint d\vec{q} d\vec{p} e^{- \beta \mathcal{H}(\vec{q},\vec{p})}
     \end{aligned}
+\end{equation*}
+For common Hamiltonian:
+\begin{equation*}
+    Z_N (T,V) = \frac{1}{\lambda^{3N}N!} \int_V d\vec{q} e^{-\beta \hat{V}(\vec{q})}
 \end{equation*}
 
 % ######################################
 \subsection*{Free energy}
-probability that the system has energy E
-
 \begin{equation*}
-    \begin{aligned}
-        p(E) &= \frac{1}{Z} \Omega(E) e^{-\beta E} = \frac{1}{Z} e^{-\beta E + S(E)/k_B} \\
-            &= \frac{1}{Z} e^{- \frac{E -TS}{k_B T}} = \frac{1}{Z} e^{-\beta F}
-    \end{aligned}
+    F(T,V,N) = -k_B T \ln Z_N (T,V)
 \end{equation*}
-This is maximal, if $F$ has a minimum with respect to E:
 \begin{equation*}
-    \begin{aligned}
-        0 &= \frac{\partial F}{\partial E} = 1-T \frac{\partial S}{\partial E} = 1- T \frac{1}{T_1}
-    \end{aligned}
-\end{equation*}
-thas is when the system is as the temperature of the heath bath.
-
-In the canonical ensemble, equilibrium corresponds to the minimum of the
-free energy $F(T,V,N)$
-\begin{equation*}
-    \frac{1}{T} = \frac{\partial S(E,V,N)}{\partial E}
+    \langle E \rangle = U = - \partial_\beta \ln Z_N 
 \end{equation*}
 
-total differential of $F(T,p,V)$
+total differential:
 \begin{equation*}
-    \begin{aligned}
-        dF &= dE + d(TS) \\
-        &= TdS - pdV + \mu N - TdS -SdT \\
-        &= -SdT -pdV + \mu N
-    \end{aligned}
+    dF = dE +d(TS) = -SdT - pdV + \mu N
 \end{equation*}
 
-\subsubsection*{Equations of state}
+% ######################################
+\subsection*{equations of state}
 \begin{equation*}
-    \begin{aligned}
-        S &= - \frac{\partial F}{\partial T} \\
-        p &= - \frac{\partial F}{\partial V} \\
-        \mu &= \frac{\partial F}{\partial N}
-    \end{aligned}
-\end{equation*}
-how to calculate $F$:
-\begin{equation*}
-    \rightarrow F(T,V,N) = -k_B T \ln(Z(T,V,N))
-\end{equation*}
-how to calculate average energy $U = \langle E \rangle$ directly from the partition sum:
-\begin{equation*}
-    \begin{aligned}
-        \langle E \rangle &= \sum_i p_i E_i = \frac{1}{Z} \sum_i E_i e^{-\beta E_i} \\
-        &= - \partial_\beta \ln (Z(\beta))
-    \end{aligned}
+    S = - \frac{\partial F}{\partial T}, \quad p = - \frac{\partial F}{\partial V}, \quad \mu = \frac{\partial F}{\partial N}
 \end{equation*}
 
 % ######################################
