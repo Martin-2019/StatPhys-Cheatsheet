@@ -51,6 +51,12 @@ Entropy $S$ must be maximal
 \end{equation*}
 
 % ######################################
+
+\subsection*{Specific heat}
+\begin{equation*}
+    c_v = \frac{dE}{dT}
+\end{equation*}
+% ######################################
 \subsection*{solution concept}
 
 \begin{itemize}
@@ -98,27 +104,25 @@ Entropy $S$ must be maximal
 
 % ######################################
 \subsection*{Einstein model for specific heat of a solid}
+$E = \hbar \omega \left(\frac{N}{2} + \mathcal{Q}\right) \rightarrow \mathcal{Q} = \left(\frac{E}{\hbar \omega} - \frac{N}{2}\right)$
 
 \begin{equation*}
     \begin{aligned}
-        E &= \hbar \omega \left(\frac{N}{2} + \mathcal{Q}\right) \\
         \Omega(E,N) &= \frac{(Q+N)!}{Q!N!} \\
-        S &= k_B \ln(\Omega) \\
-          &= k_B \left[\mathcal{Q}\ln \left(\frac{\mathcal{Q}+N}{\mathcal{Q}}\right) + N \ln \left(\frac{\mathcal{Q}+N}{N}\right)\right] \\
+        S &= k_B \left[\mathcal{Q}\ln \left(\frac{\mathcal{Q}+N}{\mathcal{Q}}\right) + N \ln \left(\frac{\mathcal{Q}+N}{N}\right)\right] \\
           = k_B N &\left[(e + \frac{1}{2}) \ln (e + \frac{1}{2})- (e-\frac{1}{2}) \ln (e- \frac{1}{2})\right] \\
           e &= E/E_0 \,\, ; E_0 = N \hbar \omega \\
-          \rightarrow E &= N \hbar \omega \left(\frac{1}{2} + \frac{1}{e^\beta -1}\right)
+          \frac{1}{T} &= \frac{\partial S}{\partial E} \Rightarrow E = N \hbar \omega \left(\frac{1}{2} + \frac{1}{e^\beta -1}\right)
     \end{aligned}
 \end{equation*}
 
 % ######################################
 \subsection*{Entropic elasticity of polymers}
-
+$ N_+ - N_- = \frac{L}{a} = m \rightarrow N_+ = \frac{1}{2} \left(N + m\right)$\\
+$\Omega = \frac{N!}{N_+ ! N_- !} = \frac{N!}{\left(\frac{1}{2}\left(N+m\right)\right)! \left(\frac{1}{2}\left(N-m\right)\right)!}$\\
+if both directions are possible $x2$
 \begin{equation*}
     \begin{aligned}
-        N_+ - N_- &= \frac{L}{a} \\
-        N_+ &= \frac{1}{2} \left(N + \frac{L}{a}\right) \\
-        \Omega &= \frac{N!}{N_+! N_-!} \\
         S &= -k_B \left(N_+ \ln \left(\frac{N_+}{N}\right)+N_-\ln\left(\frac{N_-}{N}\right)\right)
     \end{aligned}
 \end{equation*}
