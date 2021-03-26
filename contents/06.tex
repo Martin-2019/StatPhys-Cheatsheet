@@ -41,17 +41,19 @@ No phase transition for $T > 0$. But for $T = 0$ $M_S(T=0) = \mu$
 
 % ######################################
 \subsection*{Transfer matrix}
+$j = \beta J, \quad b = \beta \mu B_0, \quad S_i = \pm 1$
 \begin{equation*}
     \begin{aligned}
-        T_{i,i+1} &= e^{KS_iS_{i+1} + \frac{1}{2}H(S_i + S_{i+1})} \\
-        \rightarrow e^{-\beta \mathcal{H}} &= T_{1,2} \cdot T_{2,3} \dots T_{N,1}\\
+        T_{i,i+1} &= e^{jS_iS_{i+1} + \frac{1}{2}b(S_i + S_{i+1})} \\
+        \rightarrow e^{-\beta \mathcal{H}} &= T_{1,2} \cdot T_{2,3} \dots T_{N,1} \\
         T &= \begin{pmatrix}
             T(+1,+1) & T(+1,-1)  \\
             T(-1,+1) & T(-1,-1)   
-            \end{pmatrix} \\
-        Z_N &= \lambda_1^N + \lambda_2^N
+            \end{pmatrix}\\
+        Z_N &= \lambda_1^N + \lambda_2^N = E_+^N + E_-^N 
     \end{aligned}
 \end{equation*}
+for $N \gg 1 \rightarrow E_+ \gg E_-$
 
 % ######################################
 \subsection*{Renormalization of the Ising chain}
