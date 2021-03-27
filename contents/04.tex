@@ -64,8 +64,8 @@ Equations of state:
 \subsection*{Fluctuations}
 \begin{equation*}
     \begin{aligned}
-        \sigma_N^2 &= \langle N^2 \rangle - \langle N \rangle^2 = \frac{1}{\beta^2} \partial_\mu^2 \ln(Z_G) \\
-        \frac{\sigma_N}{\langle N \rangle} & \propto \frac{1}{N^{\frac{1}{2}}}
+        \sigma_N^2 &= \langle N^2 \rangle - \langle N \rangle^2 = \frac{1}{\beta^2} \left( \partial_\mu^2 \ln(\Xi_\mu) \right) \\
+        \frac{\sigma_N}{\langle N \rangle} & \propto \frac{1}{\sqrt{N}}
     \end{aligned}
 \end{equation*}
 
@@ -74,8 +74,8 @@ Equations of state:
 
 \begin{equation*}
     \begin{aligned}
-        Z(T,V,N) &= \frac{1}{N!} \left(\frac{V}{\lambda^3}\right)^N , \; \lambda = \frac{h}{(2 \pi m k_B T)^\frac{1}{2}} \\
-        Z_G &= \sum_{N=0}^\infty Z(T,V,N)e^{\beta \mu N} \\
+        Z_N(T,V) &= \frac{1}{N!} \left(\frac{V}{\lambda^3}\right)^N , \; \lambda = \frac{h}{(2 \pi m k_B T)^\frac{1}{2}} \\
+        \Xi &= \sum_{N=0}^\infty Z_N(T,V)z^N \\
             &= \sum_{N=0}^\infty \frac{1}{N!}\left(e^{\beta \mu} \frac{V}{\lambda^3}\right)^N \\
             &= e^{z \; \frac{V}{\lambda^3}} \quad \text{fugacity: } z:= e^{\beta \mu} \\
         \langle N \rangle &= \frac{1}{\beta} \partial_\mu \ln (Z_G) = \frac{V}{\lambda^3} d^{\beta \mu} \\
