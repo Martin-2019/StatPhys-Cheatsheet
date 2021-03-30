@@ -11,36 +11,36 @@ under the exchange of any pair of identical particles.
 \subsection*{Canonical ensemble}
 two particles that are distributed over two states with energies 0 and $\epsilon$
 
-\begin{equation*}
+\[
     \begin{aligned}
         Z_F &= e^{-\beta \epsilon} \; \text{ Fermi-Dirac} \\
         Z_B &= 1+ e^{-\beta \epsilon} + e^{-2\beta \epsilon} \; \text{ Bose-Einstein} \\
         Z_M &= \frac{1+ 2e^{-\beta \epsilon} + e^{-2\beta \epsilon}}{2} \; \text{ Maxwell-Boltzmann}
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Grand canonical ensemble}
 Fermions:
-\begin{equation*}
+\[
     z_F = 1+e^{-\beta(\epsilon-\mu)}
-\end{equation*}
+\]
 average occupation number $n_F$:
-\begin{equation*}
+\[
     n_F = \frac{1}{e^{\beta(\epsilon - \mu)}+1} \; \text{ Fermi function}
-\end{equation*}
+\]
 For $T \rightarrow 0$, the fermi function approaches a step function:
-\begin{equation*}
+\[
     n_F = \Theta (\mu - \epsilon)
-\end{equation*}
+\]
 Bosons:
-\begin{equation*}
+\[
     z_B = \frac{1}{1-e^{-\beta(\epsilon-\mu)}}
-\end{equation*}
+\]
 average occupation number $n_B$:
-\begin{equation*}
+\[
     n_B = \frac{1}{e^{\beta(\epsilon - \mu)}-1}
-\end{equation*}
+\]
 
 \begin{itemize}
     \item Fermions tend to fill up energy states one after the other
@@ -50,44 +50,44 @@ average occupation number $n_B$:
 % ######################################
 \subsection*{The ideal Fermi fluid}
 density of states:
-\begin{equation*}
+\[
     D(\epsilon) = \frac{V}{2\pi N} \left(\frac{2m}{\hbar^2}\right)^{\frac{3}{2}} \sqrt{\epsilon}
-\end{equation*}
+\]
 
 % ######################################
 \subsubsection*{Fermi energy}
-\begin{equation*}
+\[
     N = \sum_{\vec{k},m_s} n_{\vec{k},m_s} = N \int_0^\infty d\epsilon D(\epsilon) n_F(\epsilon)
-\end{equation*}
+\]
 Limit $T \rightarrow 0$. $\mu(T=0)$ is called Fermi energy:
-\begin{equation*}
+\[
     \begin{aligned}
         \epsilon_F &= (3\pi^2)^{\frac{2}{3}} \frac{\hbar^2 \rho^{\frac{2}{3}}}{2m}
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsubsection*{specific heat}
-\begin{equation*}
+\[
     \begin{aligned}
         \mu &= \epsilon_F \left[1-\frac{\pi^2}{12} \left(\frac{k_B T}{\epsilon_F}\right)^2\right] \text{ for } T \ll \frac{\epsilon_F}{k_B} \\
         c_V &= \left. \frac{\partial E}{\partial T} \right|_V = N \frac{\pi^2}{3} k_B^2 D(\epsilon_F)T \\
         c_V &= N \frac{\pi^2}{2} \frac{k_B T}{\epsilon_F} k_B
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsubsection*{Fermi pressure}
 
-\begin{equation*}
+\[
     p \overset{T\rightarrow 0}{\rightarrow}\frac{2}{5} \frac{N}{V}\epsilon_F = \frac{(2\pi^2)^{\frac{2}{3}}}{5} \frac{\hbar^2}{mv^{\frac{5}{3}}}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{The ideal Bose fluid}
 $\epsilon = \frac{\hbar^2 k^2}{2m}$ and conserved particle number N.
 
-\begin{equation*}
+\[
     \begin{aligned}
         N &= \frac{N}{\lambda^3} g_{\frac{3}{2}} (z) \\
         z &= e^{\beta \mu}, \;\; \lambda = \frac{h}{(2 \pi m k_B T)^{\frac{1}{2}}} \\
@@ -96,15 +96,15 @@ $\epsilon = \frac{\hbar^2 k^2}{2m}$ and conserved particle number N.
         c_V &= \frac{15}{4} k_B N \left(\frac{T}{T_c}\right)^{\frac{3}{2}} \frac{\zeta\left(\frac{5}{2}\right)}{\zeta\left(\frac{3}{2}\right)} \;( \text{ for } T \leq T_c) \\
         c_V &= \frac{15}{4} k_B N \frac{g_{\frac{5}{2}}(z)}{g_{\frac{3}{2}}(z)} - \frac{9}{4}k_B N \frac{g_{\frac{3}{2}}(z)}{g_{\frac{1}{2}}(z)}  \;( T > T_c) \\
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Classical limit}
 $\mu \rightarrow - \infty$ the two grandcanonical distr. become the Maxwell-Boltzmann distr.
-\begin{equation*}
+\[
     \begin{aligned}
         n_{F/B} &= \frac{1}{e^{\beta(\epsilon-\mu)}\pm1} \rightarrow e^{\beta \mu} e^{-\beta \epsilon} \\
         N &= g \frac{V}{\lambda^3} e^{\beta \mu} \\
         E &= \frac{3}{2} k_B T N
     \end{aligned}
-\end{equation*}
+\]

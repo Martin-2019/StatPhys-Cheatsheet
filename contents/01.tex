@@ -3,30 +3,30 @@
 % ######################################
 \subsection*{Bayes' theorem}
 
-\begin{equation*}
+\[
     p(B|A) = \frac{p(A|B) \cdot p(B)}{p(A)} = \frac{p(A|B) \cdot p(B)}{\sum_{B'}p(A|B) \cdot p(B')}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Expactation and covariance}
 
-\begin{equation*}
+\[
     \begin{aligned}
         \langle f \rangle &= \sum_i f(i)p_i \text{ or } \langle f \rangle = \int f(x) p(x) dx \\
         \mu = \langle i \rangle &= \sum_i i p_i \text{ or } \mu = \langle x \rangle = \int x p(x) dx
     \end{aligned}
-\end{equation*}
-\begin{equation*}
+\]
+\[
     \begin{aligned}
         \sigma^2 &= \langle i^2 \rangle - \langle i \rangle^2 \\
         \sigma_{ij}^2 &= \langle ij \rangle - \langle i \rangle^2
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Binomial distribution}
 
-\begin{equation*}
+\[
     \begin{aligned}
         \frac{N!}{(N-i)!i!} &= {N \choose i} \text{  binomial coefficient} \\
         p_i &= {N \choose i} \cdot p^i q^{N-i} \text{  distribution} \\
@@ -35,28 +35,28 @@
         \sigma^2 &= N \cdot p \cdot q \\
         \sum_{i = 0}^N p_{i} &= \sum_{i = 0}^N {N \choose i} \cdot p^i q^{N-i} = \left(p + q\right)^N = 1
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Gauss distribution}
 
-\begin{equation*}
+\[
         p(x) = \frac{1}{\left(2 \pi \sigma^2\right)^{\frac{1}{2}}} \cdot e^{-\frac{x-\mu}{2 \sigma^2}}, \quad \langle x^2 \rangle = \sigma^2
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Poisson distribution}
 
-\begin{equation*}
+\[
     \begin{aligned}
         p(k; \mu) = \frac{\mu^k}{k!} e^{- \mu}, \quad E[k] = \mu, \; V[k] = \mu
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Information entropy}
-\begin{equation*}
+\[
     \begin{aligned}
         S = - \sum_i p_i \ln (p_i)
     \end{aligned}
-\end{equation*}
+\]

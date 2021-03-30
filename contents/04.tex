@@ -3,76 +3,76 @@
 
 % ######################################
 $T,\mu = const.$
-\begin{equation*}
+\[
     \begin{aligned}
         p_N(q,p) &= \frac{1}{\Xi_\mu(T,V)} e^{-\beta (H_N(q,p) - \mu N)} \\
         \Xi_{\mu}(T,V) &= \sum_{N=0}^\infty \frac{1}{h^{3N}N!} \iint d^{3N} q d^{3N} p e^{-\beta (H_N - \mu N)} \\
         \rightarrow \Xi_z&= \sum_{N=0}^\infty z^N Z_N(T,V)
     \end{aligned}
-\end{equation*}
+\]
 $z = e^{\beta \mu} \rightarrow $ Fugacity 
 
 % ######################################
 
 \subsection*{Mean phase space observable}
 
-\begin{equation*}
+\[
     \begin{aligned}
         \langle F \rangle = &\frac{1}{\Xi_\mu(T,V)} \sum_{N=0}^\infty \frac{1}{h^{3N}N!} \iint d^{3N} q d^{3N} p  \dots \\
          &\dots e^{-\beta (H_N - \mu N)} F_N (q,p)
     \end{aligned}
-\end{equation*}
+\]
 \textbf{mean particle number:}
-\begin{equation*}
+\[
     \begin{aligned}
         \langle N \rangle &= \frac{1}{\beta} \left( \frac{\partial}{\partial \mu} \ln \left(\Xi_\mu ( T,V)\right)\right)_{T,V} \\
             &= z \left(\frac{\partial}{\partial z} \ln \left(\Xi_z(T,V)\right)\right)_{T,V}
     \end{aligned}
-\end{equation*}
+\]
 \textbf{pressure:}
-\begin{equation*}
+\[
     p = - \left\langle \frac{\partial H}{\partial V} \right\rangle = \frac{1}{\beta} \left( \frac{\partial}{\partial V} \ln \left(\Xi_\mu ( T,V)\right)\right)
-\end{equation*}
+\]
 \textbf{energy $U$:}
-\begin{equation*}
+\[
     \begin{aligned}
         U = \langle H \rangle &= - \left( \frac{\partial}{\partial \beta} \ln \left(\Xi_\mu ( T,V)\right)\right)_{\mu,V} + \mu \langle N \rangle \\
             &= - \left( \frac{\partial}{\partial \beta} \ln \left(\Xi_z ( T,V)\right)\right)_{z,V}
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Grandcanonical potential}
 grandcanonical potential:
-\begin{equation*}
+\[
     \Psi(T,V,\mu) = -k_B T \ln \left( \Xi_\mu (T,V)\right)
-\end{equation*}
+\]
 p is maximal, if $\Psi$ is minimal. 
 
 Total differential:
-\begin{equation*}
+\[
         d\Psi = -SdT -pdV - \langle N \rangle d\mu
-\end{equation*}
+\]
 Equations of state:
-\begin{equation*}
+\[
     \begin{aligned}
         S &= - \frac{\partial \Psi}{\partial T} , p = - \frac{\partial \Psi}{\partial V}, N = - \frac{\partial \Psi}{\partial \mu}
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Fluctuations}
-\begin{equation*}
+\[
     \begin{aligned}
         \sigma_N^2 &= \langle N^2 \rangle - \langle N \rangle^2 = \frac{1}{\beta^2} \left( \partial_\mu^2 \ln(\Xi_\mu) \right) \\
         \frac{\sigma_N}{\langle N \rangle} & \propto \frac{1}{\sqrt{N}}
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Ideal gas}
 
-\begin{equation*}
+\[
     \begin{aligned}
         Z_N(T,V) &= \frac{1}{N!} \left(\frac{V}{\lambda^3}\right)^N , \; \lambda = \frac{h}{(2 \pi m k_B T)^\frac{1}{2}} \\
         \Xi &= \sum_{N=0}^\infty Z_N(T,V)z^N \\
@@ -81,15 +81,15 @@ Equations of state:
         \langle N \rangle &= \frac{1}{\beta} \partial_\mu \ln (Z_G) = \frac{V}{\lambda^3} d^{\beta \mu} \\
         \mu &= k_B T \ln \left(\frac{N \lambda^3}{V}\right)
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Molecular adsorption onto a surface}
 
-\begin{equation*}
+\[
     \begin{aligned}
         Z_G &= z_G^N; z_G = 1+ e^{-\beta(\epsilon -\mu)} \\
         \langle n \rangle &= \frac{1}{e^{-\beta(\mu-\epsilon)}+1} \; \text{ per site} \\
         \langle \epsilon \rangle &= \epsilon \langle n \rangle
     \end{aligned}
-\end{equation*}
+\]

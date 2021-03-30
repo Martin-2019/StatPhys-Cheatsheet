@@ -5,57 +5,57 @@ $E \approx$ const , $V=$ const , $N=$ const.
 % ######################################
 \subsection*{The fundamental postulate}
 
-\begin{equation*}
+\[
     \begin{aligned}
         \Omega(E) &= \sum_{n: E- \delta E \leq E_n \leq E} 1 \\
         \Omega(E; \delta E) &= \frac{1}{h^{3N} N!}  \iint_{E- \delta E \leq \mathcal{H}(\vec{q}, \vec{p}) \leq E} d \vec{q} d \vec{p} \\
         S &= -k_B \sum_{i=1}^\Omega p_i \ln (p_i) = k_B \ln (\Omega)
     \end{aligned}
-\end{equation*}
+\]
 
 \subsubsection*{$n_0$ different particles}
-\begin{equation*}
+\[
     \Omega = \frac{1}{h^{3N} \prod_{j=0}^{n_0}N_j!}  \iint_{E- \delta E \leq \mathcal{H}(\vec{q}, \vec{p}) \leq E} d \vec{q} d \vec{p}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Equilibrium conditions}
 Entropy $S$ must be maximal
 
 \subsubsection*{Thermal contact}
-\begin{equation*}
+\[
     \begin{aligned}
         \left. \frac{\partial S (E,V,N)}{\partial E} \right|_{V,N} = \frac{1}{T(E,V,N)}
     \end{aligned}
-\end{equation*}
+\]
 
 % ######
 \subsubsection*{Contact with volume excahnge}
 
-\begin{equation*}
+\[
     \left. \frac{\partial S(E,V,N)}{\partial V} \right|_{E,N} = \frac{p(E,V,N)}{T(E,V,N)}
-\end{equation*}
+\]
 
 % ######
 \subsubsection*{Contact with exchange of particle number}
 
-\begin{equation*}
+\[
     \left. \frac{\partial S(E,V,N)}{\partial N} \right|_{E,V} = - \frac{\mu (E,V,N)}{T(E,V,N)}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Equations of state}
 
-\begin{equation*}
+\[
     dE = TdS - pdV + \mu dN
-\end{equation*}
+\]
 
 % ######################################
 
 \subsection*{Specific heat}
-\begin{equation*}
+\[
     c_v = \frac{dE}{dT}
-\end{equation*}
+\]
 % ######################################
 \subsection*{solution concept}
 
@@ -76,37 +76,37 @@ Entropy $S$ must be maximal
 % ######################################
 \subsection*{Ideal Gas}
 
-\begin{equation*}
+\[
     \mathcal{H} = \sum_{i=1}^{3N} \frac{p_i^2}{2m} + V(q_1, \dots, q_{3N})
-\end{equation*}
+\]
 
 \subsubsection*{microcanonical partition sum for an ideal gas}
 
-\begin{equation*}
+\[
     \begin{aligned}
         \Omega(E) &= \frac{V^N \pi^{3N/2} (2mE)^{3N/2}}{h^{3N}N!\left( \frac{3N}{2} \right)!} \\
         S &= k_B N \left\lbrace \ln \left[ \left( \frac{V}{N} \right) \left( \frac{4 \pi m E}{3 h^2 N} \right)^{3/2} \right] + \frac{5}{2}\right\rbrace
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 
 \subsubsection*{Equations of state fo ideal gas}
 
-\begin{equation*}
+\[
     \begin{aligned}
         \frac{1}{T} &= \left(\frac{\partial S}{\partial E}\right)_{N,V} = \frac{3}{2} \frac{Nk_B}{E} \rightarrow U = \frac{3}{2} N k_B T \\
         p &= T\left(\frac{\partial S}{\partial V}\right)_{E,N} = TNk_B \frac{1}{V}\rightarrow pV = N k_B T \\
-        \mu &= k_B T \ln \left(\frac{N\lambda^3}{V}\right) \text{ chemical potentail} \\
-        \lambda &= \frac{h}{\sqrt{2 \pi m k_B T}} \quad \text{Thermische de Broglie}
+        \mu &= k_B T \ln \left(\frac{N\lambda^3}{V}\right) \text{ chemical potential} \\
+        \lambda &= \frac{h}{\sqrt{2 \pi m k_B T}} \quad \text{Thermal de Broglie}
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Einstein model for specific heat of a solid}
 $E = \hbar \omega \left(\frac{N}{2} + \mathcal{Q}\right) \rightarrow \mathcal{Q} = \left(\frac{E}{\hbar \omega} - \frac{N}{2}\right)$
 
-\begin{equation*}
+\[
     \begin{aligned}
         \Omega(E,N) &= \frac{(Q+N)!}{Q!N!} \\
         S &= k_B \left[\mathcal{Q}\ln \left(\frac{\mathcal{Q}+N}{\mathcal{Q}}\right) + N \ln \left(\frac{\mathcal{Q}+N}{N}\right)\right] \\
@@ -114,38 +114,38 @@ $E = \hbar \omega \left(\frac{N}{2} + \mathcal{Q}\right) \rightarrow \mathcal{Q}
           e &= E/E_0 \,\, ; E_0 = N \hbar \omega \,\, ; \beta = \hbar \omega / k_B T \\
           \frac{1}{T} &= \frac{\partial S}{\partial E} \Rightarrow E = N \hbar \omega \left(\frac{1}{2} + \frac{1}{e^\beta -1}\right)
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Entropic elasticity of polymers}
 $ N_+ - N_- = \frac{L}{a} = m \rightarrow N_+ = \frac{1}{2} \left(N + m\right)$\\
 $\Omega = \frac{N!}{N_+ ! N_- !} = \frac{N!}{\left(\frac{1}{2}\left(N+m\right)\right)! \left(\frac{1}{2}\left(N-m\right)\right)!}$\\
 if both directions are possible $x2$
-\begin{equation*}
+\[
     \begin{aligned}
         S &= -k_B \left(N_+ \ln \left(\frac{N_+}{N}\right)+N_-\ln\left(\frac{N_-}{N}\right)\right)
     \end{aligned}
-\end{equation*}
+\]
 
 % ######################################
 \subsection*{Statistical deviation from average}
 Two ideal gases in thermal conact $T_1 = T_2$ 
-\begin{equation*}
+\[
     \begin{aligned}
         S_i &= \frac{3}{2} k_B N_i \ln (E_i) + \text{independent of} E_i \\
         S &= S_1 + S_2 \\
         dS &= 0 \; \rightarrow \; \frac{\partial S_1}{\partial E_1} = \frac{\partial S_2}{\partial E_2} \\
         \rightarrow & \bar{E}_1 = \frac{N_1}{N} E
     \end{aligned}
-\end{equation*}
+\]
 
 consider small deviation:
 
-\begin{equation*}
+\[
     \begin{aligned}
         E_1 &= \bar{E}_1 + \Delta E, \quad E_2 = \bar{E}_2 - \Delta E \\
         S(\bar{E}_1 + \Delta E) &\approx \frac{3}{2} k_B \left[N_1 \ln \bar{E}_1 + N_2 \ln \bar{E}_2  \right. \\
             &\left. - \frac{N_1}{2} \left(\frac{\Delta E}{\bar{E}_1}\right)^2 - \frac{N_2}{2} \left(\frac{\Delta E}{\bar{E}_2}\right)^2\right] \\
         \rightarrow \Omega &= \bar{\Omega} e^{\left[-\frac{3}{4} \left(\frac{\Delta E}{E}\right)^2 N^2 \left(\frac{1}{N_1}+\frac{1}{N_2}\right)\right]}
     \end{aligned}
-\end{equation*}
+\]
