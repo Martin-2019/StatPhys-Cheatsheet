@@ -3,25 +3,24 @@
 
 % ######################################
 \subsection*{Fermion vs. bosons}
-Particles with half-integer (integer) spin are called fermions (bosons). Their
-total wave function (space and spin) must be antisymmetric (symmetric)
-under the exchange of any pair of identical particles.
+\begin{enumerate}
+    \itemsep 0pt
+    \item Fermions: Pauli-principle + not distinguishable
+    \item Bosons: symetric wave function + not distinguishable
+    \item Boltzmann: particles are distinguishable
+\end{enumerate}
 
 % ######################################
 \subsection*{Canonical ensemble}
-two particles that are distributed over two states with energies 0 and $\epsilon$
-
+\(\omega_n \rightarrow \) degeneracy of state \(n\)
 \[
-    \begin{aligned}
-        Z_F &= e^{-\beta \epsilon} \; \text{ Fermi-Dirac} \\
-        Z_B &= 1+ e^{-\beta \epsilon} + e^{-2\beta \epsilon} \; \text{ Bose-Einstein} \\
-        Z_M &= \frac{1+ 2e^{-\beta \epsilon} + e^{-2\beta \epsilon}}{2} \; \text{ Maxwell-Boltzmann}
-    \end{aligned}
+    z = \sum_n \omega_n \exp \left(-\beta E_n\right)
 \]
 
 % ######################################
 \subsection*{Grand canonical ensemble}
-Fermions:
+only two states \(0, \epsilon\) \\
+\textbf{Fermions:}
 \[
     z_F = 1+e^{-\beta(\epsilon-\mu)}
 \]
@@ -33,7 +32,7 @@ For $T \rightarrow 0$, the fermi function approaches a step function:
 \[
     n_F = \Theta (\mu - \epsilon)
 \]
-Bosons:
+\textbf{Bosons:}
 \[
     z_B = \frac{1}{1-e^{-\beta(\epsilon-\mu)}}
 \]
